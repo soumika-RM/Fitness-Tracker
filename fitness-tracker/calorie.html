@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="caloriestyle.css">
+    <title>Calorie Intake Recommender</title>
+  </head>
+  <body>
+  <br>
+  <h1>Calorie Intake Recommender</h1>
+  <br>
+  <div class="container">
+    <h3>To calculate your calories, please pick your fitness goal:</h3>
+    <br>
+    <div class="row">
+      <div class="col-sm offset-sm-1">
+        <button type="button" class="btn btn-outline-info btn-lg" onclick="openWLForm()">Weight Loss</button>
+        <br>
+        <div class= "form-popup" id="popup1">
+            <div class="form-group w-75">
+                <label for="exampleInputEmail1">Current Weight</label>
+                <input type="number" class="form-control" id="weight1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Please enter in kg</small>
+              </div>
+              <div class="form-group w-75">
+                  <label for="exampleInputPassword1">Height</label>
+                  <input type="number" class="form-control" id="height1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Please enter in cm</small>
+              </div>
+              <div class="form-group w-75">
+                <label for="exampleInputPassword1">Gender</label>
+                <select class="custom-select" id="gender1">
+                    <option selected>Pick one</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
+                    <option value="4">Prefer not to say</option>
+                </select>
+            </div>            
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">Age</label>
+                <input type="number" class="form-control" id="age1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">What's your activity level?</label>
+                <select class="custom-select" id="activity1">
+                    <option selected>Pick one</option>
+                    <option value="1">Sedentary Couch Potato</option>
+                    <option value="2">Light exercise 2-3 times a week</option>
+                    <option value="3">Moderate exercise 3-5 times a week</option>
+                    <option value="4">Heavy exercise 6-7 times a week</option>
+                </select>
+            </div>
+            <button type="submitwl" class="btn btn-primary btn-lg" id="submitwl" >Submit</button>
+            <br><br>
+            <button type ="close" width="114" height="38" onclick="closeWLForm()"> Close</button>
+            <br><br>
+            <h5>Your weight loss calories per day is <span id="weightloss">____</span></h5>
+        </div>
+        <br>
+      </div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-outline-info btn-lg" onclick="openMForm()">Maintenance</button>
+        <br>
+        <div class= "form-popup" id="popup2">
+            <div class="form-group w-75">
+                <label for="exampleInputEmail1">Current Weight</label>
+                <input type="number" class="form-control" id="weight2" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Please enter in kg</small>
+              </div>
+              <div class="form-group w-75">
+                  <label for="exampleInputPassword1">Height</label>
+                  <input type="number" class="form-control" id="height2" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Please enter in cm</small>
+              </div>
+              <div class="form-group w-75">
+                <label for="exampleInputPassword1">Gender</label>
+                <select class="custom-select" id="gender2">
+                    <option selected>Pick one</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
+                    <option value="4">Prefer not to say</option>
+                </select>
+            </div>            
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">Age</label>
+                <input type="number" class="form-control" id="age2" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">What's your activity level?</label>
+                <select class="custom-select" id="activity2">
+                    <option selected>Pick one</option>
+                    <option value="1">Sedentary Couch Potato</option>
+                    <option value="2">Light exercise 2-3 times a week</option>
+                    <option value="3">Moderate exercise 3-5 times a week</option>
+                    <option value="4">Heavy exercise 6-7 times a week</option>
+                </select>
+            </div>
+            <button type="submitm" class="btn btn-primary btn-lg" id="submitm" >Submit</button>
+            <br><br>
+            <button type ="close" width="114" height="38" onclick="closeMForm()"> Close</button>
+            <br><br>
+            <h5>Your maintenance calories per day is <span id="maintenance">____</span></h5>
+        </div>
+        <br>
+      </div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-outline-info btn-lg" onclick="openWGForm()">Weight Gain</button>
+        <br>
+        <div class= "form-popup" id="popup3">
+            <div class="form-group w-75">
+                <label for="exampleInputEmail1">Current Weight</label>
+                <input type="number" class="form-control" id="weight3" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Please enter in kg</small>
+              </div>
+              <div class="form-group w-75">
+                  <label for="exampleInputPassword1">Height</label>
+                  <input type="number" class="form-control" id="height3" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Please enter in cm</small>
+              </div>
+              <div class="form-group w-75">
+                <label for="exampleInputPassword1">Gender</label>
+                <select class="custom-select" id="gender3">
+                    <option selected>Pick one</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Other</option>
+                    <option value="4">Prefer not to say</option>
+                </select>
+            </div>            
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">Age</label>
+                <input type="number" class="form-control" id="age3" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group w-75">
+                <label for="exampleInputPassword1">What's your activity level?</label>
+                <select class="custom-select" id="activity3">
+                    <option selected>Pick one</option>
+                    <option value="1">Sedentary Couch Potato</option>
+                    <option value="2">Light exercise 2-3 times a week</option>
+                    <option value="3">Moderate exercise 3-5 times a week</option>
+                    <option value="4">Heavy exercise 6-7 times a week</option>
+                </select>
+            </div>
+            <button type="submitwg" class="btn btn-primary btn-lg" id="submitwg" >Submit</button>
+            <br><br>
+            <button type ="close" width="114" height="38" onclick="closeWGForm()"> Close</button>
+            <br><br>
+            <h5>Your weight gain calories per day is <span id="weightgain">____</span></h5>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="caloriescript.js"></script>
+</body>
+</html>
